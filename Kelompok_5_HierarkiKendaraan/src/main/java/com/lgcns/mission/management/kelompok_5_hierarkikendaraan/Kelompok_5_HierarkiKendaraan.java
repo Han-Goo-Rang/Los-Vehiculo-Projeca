@@ -24,13 +24,12 @@ public class Kelompok_5_HierarkiKendaraan {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input nama pengguna
+        
         System.out.print("Masukkan nama Anda: ");
         String namaUser = scanner.nextLine();
-        System.out.println("\nHalo, " + namaUser + "! Selamat datang di sistem hierarki kendaraan.\n");
+        System.out.println("\nHalo, " + namaUser + "~ Welkom to sistem hierarki kendaraan.\n");
 
         while (true) {
-            // Tampilkan menu utama
             System.out.println("Pilih menu berikut:");
             System.out.println("1. Pelajari apa saja transportasi air");
             System.out.println("2. Pelajari apa saja transportasi darat");
@@ -38,7 +37,7 @@ public class Kelompok_5_HierarkiKendaraan {
             System.out.println("4. Keluar");
             System.out.print("Masukkan pilihan Anda (1-4): ");
             int pilihan = scanner.nextInt();
-            scanner.nextLine(); // Clear buffer newline
+            scanner.nextLine(); 
 
             switch (pilihan) {
                 case 1:
@@ -59,9 +58,9 @@ public class Kelompok_5_HierarkiKendaraan {
         }
     }
 
-    // Menampilkan kendaraan air
+    
     private static void tampilkanKendaraanAir(Scanner scanner) {
-        // Array kendaraan air yang telah diinstansiasi dengan tipe data yang benar
+        
         Kendaraan[] kendaraanAir = {
             new KapalFerry("Kapal Ferry", "Putih", "Baja", "Mesin Diesel", 500),
             new Kayak("Kayak", "Hijau", "Fiber Glass", "Dayung", 4),
@@ -72,9 +71,9 @@ public class Kelompok_5_HierarkiKendaraan {
         tampilkanDetailKendaraan(kendaraanAir, scanner);
     }
 
-    // Menampilkan kendaraan darat
+  
     private static void tampilkanKendaraanDarat(Scanner scanner) {
-        // Array kendaraan darat yang telah diinstansiasi dengan tipe data yang benar
+        
         Kendaraan[] kendaraanDarat = {
             new Mobil("Mobil", "Merah", "Mobil", "Mesin", "Volkswagen", 350000000.0),
             new Motor("Motor", "Hitam", "Motor", "Mesin Karbu", "Suzuki", 25000000.0),
@@ -86,9 +85,9 @@ public class Kelompok_5_HierarkiKendaraan {
         tampilkanDetailKendaraan(kendaraanDarat, scanner);
     }
 
-    // Menampilkan kendaraan udara
+    
     private static void tampilkanKendaraanUdara(Scanner scanner) {
-        // Array kendaraan udara yang telah diinstansiasi dengan tipe data yang benar
+       
         Kendaraan[] kendaraanUdara = {
             new BalonUdara("Balon Udara", "Merah", 20, "Nilon", 4, "Fusso"),
             new Helikopter("Helikopter", "Hitam", 5, "Aluminium", "AH-1444", "Cyan", 2),
@@ -99,21 +98,24 @@ public class Kelompok_5_HierarkiKendaraan {
         tampilkanDetailKendaraan(kendaraanUdara, scanner);
     }
 
-    // Fungsi untuk menampilkan detail kendaraan berdasarkan jenisnya
+    
     private static void tampilkanDetailKendaraan(Kendaraan[] kendaraan, Scanner scanner) {
         for (Kendaraan k : kendaraan) {
             k.tampilkanDetail();
-            System.out.println(); // Baris kosong antara detail kendaraan
+            System.out.println(); 
         }
 
-        // Kembali ke menu utama setelah menampilkan detail
+    while (true) {
         System.out.print("Kembali ke menu utama? (y/n): ");
         String kembali = scanner.nextLine();
         if (kembali.equalsIgnoreCase("y")) {
-            return; // Kembali ke menu utama
-        } else {
+            return; 
+        } else if (kembali.equalsIgnoreCase("n")) {
             System.out.println("Terima kasih telah menggunakan sistem ini!");
-            System.exit(0); // Keluar dari aplikasi
+            System.exit(0);
+        } else {
+            System.out.println("Tidak valid. Silakan pilih kembali (y atau n)");
         }
+    }
     }
 }
