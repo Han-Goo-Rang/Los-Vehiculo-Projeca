@@ -8,7 +8,7 @@ package com.lgcns.mission.management.kelompok_5_hierarkikendaraan;
  *
  * @author HUAWEI
  */
-public class Kendaraan {
+public abstract class Kendaraan {
     private String nama;
     private String warna;
 
@@ -17,6 +17,7 @@ public class Kendaraan {
         this.warna = warna;
     }
 
+    // Getter
     public String getNama() {
         return nama;
     }
@@ -24,10 +25,14 @@ public class Kendaraan {
     public String getWarna() {
         return warna;
     }
+    
+    public abstract void tampilkanDetail();
 
+    // toString Method
     @Override
     public String toString() {
         return "Kendaraan [nama=" + nama + ", warna=" + warna + "]";
     }
 }
+
 

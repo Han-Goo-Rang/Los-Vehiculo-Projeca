@@ -1,70 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package tubes;
+package KendaraanUdara;
 
-/**
- *
- * @author noven
- */
-public class Helikopter {
-    // Atribut
+public class Helikopter extends KendaraanUdara {
     private String namaHelikopter;
     private String warnaHelikopter;
     private int banyakBalingBaling;
 
-    // Konstruktor
-    public Helikopter(String namaHelikopter, String warnaHelikopter, int banyakBalingBaling) {
+    public Helikopter(String nama, String warna, int kapasitasPenumpang, String bahanBody, 
+                      String namaHelikopter, String warnaHelikopter, int banyakBalingBaling) {
+        super(nama, warna, kapasitasPenumpang, bahanBody);
         this.namaHelikopter = namaHelikopter;
         this.warnaHelikopter = warnaHelikopter;
         this.banyakBalingBaling = banyakBalingBaling;
     }
 
-    // Getter dan Setter
-    public String getNamaHelikopter() {
-        return namaHelikopter;
-    }
-
-    public void setNamaHelikopter(String namaHelikopter) {
-        this.namaHelikopter = namaHelikopter;
-    }
-
-    public String getWarnaHelikopter() {
-        return warnaHelikopter;
-    }
-
-    public void setWarnaHelikopter(String warnaHelikopter) {
-        this.warnaHelikopter = warnaHelikopter;
-    }
-
-    public int getBanyakBalingBaling() {
-        return banyakBalingBaling;
-    }
-
-    public void setBanyakBalingBaling(int banyakBalingBaling) {
-        this.banyakBalingBaling = banyakBalingBaling;
-    }
-
-    // Method untuk melayang
     public void melayang() {
-        System.out.println("Helikopter " + namaHelikopter + " dengan warna " + warnaHelikopter + " sedang melayang di udara.");
+        System.out.println("Helikopter " + namaHelikopter + " sedang melayang di udara.");
     }
 
-    // Method untuk bergerak
     public void gerak() {
-        System.out.println("Helikopter " + namaHelikopter + " bergerak dengan menggunakan " + banyakBalingBaling + " baling-baling.");
+        System.out.println("Helikopter " + namaHelikopter + " bergerak menuju tujuan.");
     }
 
-    // Main Method untuk testing
-    public static void main(String[] args) {
-        Helikopter heli1 = new Helikopter("Apache AH-64", "Hijau", 4);
-        System.out.println("Nama Helikopter: " + heli1.getNamaHelikopter());
-        System.out.println("Warna Helikopter: " + heli1.getWarnaHelikopter());
-        System.out.println("Banyak Baling-Baling: " + heli1.getBanyakBalingBaling());
-        
-        heli1.melayang();
-        heli1.gerak();
+    @Override
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "            |");
+        System.out.println("| Warna               | " + getWarna() + "          |");
+        System.out.println("| Kapasitas Penumpang | " + getKapasitasPenumpang() + "                |");
+        System.out.println("| Bahan Body          | " + getBahanBody() + "      |");
+        System.out.println("| Nama Helikopter     | " + namaHelikopter + "      |");
+        System.out.println("| Warna Helikopter    | " + warnaHelikopter + "      |");
+        System.out.println("| Banyak Baling-Baling| " + banyakBalingBaling + "              |");
+        System.out.println("+----------------------+--------------------+");
     }
 }
-

@@ -1,25 +1,23 @@
 package KendaraanDarat;
-import com.lgcns.mission.management.kelompok_5_hierarkikendaraan.Kendaraan;
 
-public class Sepeda extends Kendaraan {
+public class Sepeda extends KendaraanDarat {
     private String merekSepeda;
-    private double asuransi;
 
-    public Sepeda(String nama, String warna, String merekSepeda, double asuransi) {
-        super(nama, warna);
+    public Sepeda(String nama, String warna, String jenisKendaraan, String jenisPenggerak, String merekSepeda) {
+        super(nama, warna, jenisKendaraan, jenisPenggerak);
         this.merekSepeda = merekSepeda;
-        this.asuransi = asuransi;
     }
 
-    public String getMerekSepeda() {
-        return merekSepeda;
-    }
-
-    public double getAsuransi() {
-        return asuransi;
-    }
-
-    public void mengayuh() {
-        System.out.println("Sepeda " + merekSepeda + " sedang dikayuh.");
+    @Override
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "        |");
+        System.out.println("| Warna               | " + getWarna() + "        |");
+        System.out.println("| Jenis Kendaraan     | " + getJenisKendaraan() + " |");
+        System.out.println("| Jenis Penggerak     | " + getJenisPenggerak() + " |");
+        System.out.println("| Merek Sepeda        | " + merekSepeda + "        |");
+        System.out.println("+----------------------+--------------------+");
     }
 }

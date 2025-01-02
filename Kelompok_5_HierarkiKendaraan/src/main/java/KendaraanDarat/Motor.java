@@ -1,32 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package KendaraanDarat;
 
-/**
- *
- * @author acer nitro
- */
-public class Motor extends KendaraanDarat{
+public class Motor extends KendaraanDarat {
     private String merekMotor;
     private double asuransi;
-    
-    public Motor(String nama, String warna, String merekMotor, double asuransi, String jenisKendaraan, String jenisPenggerak){
-        super (nama, warna, jenisKendaraan, jenisPenggerak);
+
+    public Motor(String nama, String warna, String jenisKendaraan, String jenisPenggerak, String merekMotor, double asuransi) {
+        super(nama, warna, jenisKendaraan, jenisPenggerak);
         this.merekMotor = merekMotor;
-        this. asuransi = asuransi;
+        this.asuransi = asuransi;
     }
-    
-    public double jarakMaksimal(){
-        return 1;
-    }
-    
-    public void menyetir(){
-        System.out.println("Sedang menyetir");
-    }
-    
-    public void mengerem(){
-        System.out.println("Tidak mengerem");
+
+    @Override
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "        |");
+        System.out.println("| Warna               | " + getWarna() + "        |");
+        System.out.println("| Jenis Kendaraan     | " + getJenisKendaraan() + " |");
+        System.out.println("| Jenis Penggerak     | " + getJenisPenggerak() + " |");
+        System.out.println("| Merek Motor         | " + merekMotor + "         |");
+        System.out.println("| Asuransi            | " + asuransi + "          |");
+        System.out.println("+----------------------+--------------------+");
     }
 }

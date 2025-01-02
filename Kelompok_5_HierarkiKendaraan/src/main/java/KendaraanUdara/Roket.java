@@ -1,70 +1,50 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package KendaraanUdara;
 
-/**
- *
- * @author noven
- */
-public class Roket {
-    // Atribut
+public class Roket extends KendaraanUdara {
     private String namaRoket;
     private double lebar;
     private double tinggi;
 
-    // Konstruktor
-    public Roket(String namaRoket, double lebar, double tinggi) {
+    public Roket(String nama, String warna, int kapasitasPenumpang, String bahanBody, 
+                 String namaRoket, double lebar, double tinggi) {
+        super(nama, warna, kapasitasPenumpang, bahanBody);
         this.namaRoket = namaRoket;
         this.lebar = lebar;
         this.tinggi = tinggi;
     }
 
-    // Getter dan Setter
     public String getNamaRoket() {
         return namaRoket;
-    }
-
-    public void setNamaRoket(String namaRoket) {
-        this.namaRoket = namaRoket;
     }
 
     public double getLebar() {
         return lebar;
     }
 
-    public void setLebar(double lebar) {
-        this.lebar = lebar;
-    }
-
     public double getTinggi() {
         return tinggi;
     }
 
-    public void setTinggi(double tinggi) {
-        this.tinggi = tinggi;
-    }
-
-    // Method untuk meluncur
     public void meluncur() {
-        System.out.println("Roket " + namaRoket + " sedang meluncur ke luar angkasa!");
+        System.out.println("Roket " + namaRoket + " sedang meluncur.");
     }
 
-    // Method untuk memantau status
     public void statusMonitor() {
-        System.out.println("Status Roket:");
-        System.out.println("Nama Roket: " + namaRoket);
-        System.out.println("Lebar: " + lebar + " meter");
-        System.out.println("Tinggi: " + tinggi + " meter");
-        System.out.println("Semua sistem berjalan dengan normal.");
+        System.out.println("Memantau status roket: " + namaRoket);
     }
 
-    // Main Method untuk testing
-    public static void main(String[] args) {
-        Roket roket1 = new Roket("Falcon 9", 3.7, 70);
-        roket1.statusMonitor();
-        roket1.meluncur();
+    @Override
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "           |");
+        System.out.println("| Warna               | " + getWarna() + "          |");
+        System.out.println("| Kapasitas Penumpang | " + getKapasitasPenumpang() + "              |");
+        System.out.println("| Bahan Body          | " + getBahanBody() + "          |");
+        System.out.println("| Nama Roket          | " + namaRoket + "           |");
+        System.out.println("| Lebar               | " + lebar + " meter         |");
+        System.out.println("| Tinggi              | " + tinggi + " meter         |");
+        System.out.println("+----------------------+--------------------+");
     }
 }
-

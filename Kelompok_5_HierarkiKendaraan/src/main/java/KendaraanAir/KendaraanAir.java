@@ -9,9 +9,9 @@ import com.lgcns.mission.management.kelompok_5_hierarkikendaraan.Kendaraan;
  *
  * @author HUAWEI
  */
-public class KendaraanAir extends Kendaraan{
-    private String bahanLambung;
-    private String tipePenggerak;
+public abstract class KendaraanAir extends Kendaraan {
+    protected String bahanLambung;
+    protected String tipePenggerak;
 
     public KendaraanAir(String nama, String warna, String bahanLambung, String tipePenggerak) {
         super(nama, warna);
@@ -19,6 +19,7 @@ public class KendaraanAir extends Kendaraan{
         this.tipePenggerak = tipePenggerak;
     }
 
+    // Getter
     public String getBahanLambung() {
         return bahanLambung;
     }
@@ -27,8 +28,13 @@ public class KendaraanAir extends Kendaraan{
         return tipePenggerak;
     }
 
+    // toString Method
     @Override
     public String toString() {
-        return super.toString() + ", KendaraanAir [bahanLambung=" + bahanLambung + ", tipePenggerak=" + tipePenggerak + "]";
+        return super.toString() + ", Bahan Lambung: " + bahanLambung + ", Tipe Penggerak: " + tipePenggerak;
     }
+
+    // Metode abstrak untuk menampilkan deskripsi kendaraan
+    @Override
+    public abstract void tampilkanDetail();
 }

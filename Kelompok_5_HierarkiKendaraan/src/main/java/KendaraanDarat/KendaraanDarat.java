@@ -8,25 +8,23 @@ import com.lgcns.mission.management.kelompok_5_hierarkikendaraan.Kendaraan;
  *
  * @author acer nitro
  */
-public class KendaraanDarat extends Kendaraan{
+public abstract class KendaraanDarat extends Kendaraan {
     private String jenisKendaraan;
     private String jenisPenggerak;
-    
-    public KendaraanDarat(String nama, String warna, String jenisKendaraan, String jenisPenggerak){
-        super(nama,warna);
+
+    public KendaraanDarat(String nama, String warna, String jenisKendaraan, String jenisPenggerak) {
+        super(nama, warna);
         this.jenisKendaraan = jenisKendaraan;
         this.jenisPenggerak = jenisPenggerak;
     }
-    
-    public String getJenisKendaraan(){
+
+    public String getJenisKendaraan() {
         return jenisKendaraan;
     }
-    
-    public String getJenisPenggerak(){
+
+    public String getJenisPenggerak() {
         return jenisPenggerak;
     }
-    
-    public String toString(){
-        return ("Jenis Kendaraan: " + jenisKendaraan + ", Jenis Penggerak: " + jenisPenggerak);
-    }
+  
+    public abstract void tampilkanDetail();
 }

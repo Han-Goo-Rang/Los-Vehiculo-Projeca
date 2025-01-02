@@ -1,33 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package KendaraanUdara;
 
-/**
- *
- * @author VIP
- */
-public class BalonUdara extends KendaraanUdara{
+public class BalonUdara extends KendaraanUdara {
     private int jumlahTabungGas;
     private String merk;
-    
-    public BalonUdara(String nama, String warna, int kapasitasPenumpang, String bahanBody, int jumlahTabungGas, String merk){
-    super(nama, warna, kapasitasPenumpang, bahanBody);
+
+    public BalonUdara(String nama, String warna, int kapasitasPenumpang, String bahanBody, 
+                      int jumlahTabungGas, String merk) {
+        super(nama, warna, kapasitasPenumpang, bahanBody);
+        this.jumlahTabungGas = jumlahTabungGas;
+        this.merk = merk;
     }
-    
-    public int getJumlahTabungGas(){
-    return jumlahTabungGas;
+
+    public int getJumlahTabungGas() {
+        return jumlahTabungGas;
     }
-    
-    public String getMerk(){
-    return merk;
+
+    public String getMerk() {
+        return merk;
     }
-    
+
+    public double posisiKetinggian() {
+        // Contoh perhitungan posisi ketinggian berdasarkan jumlah tabung gas
+        return jumlahTabungGas * 100.0; // Asumsi setiap tabung gas menghasilkan 100 meter ketinggian
+    }
+
     @Override
-    public String toString(){
-        return "Nama kendaraan: " + getNama() + "\n Warna Kendaraan: " + 
-                getWarna() + "\n Kapasitas Penumpang: " + getKapasitasPenumpang() + "\n Bahan Body: " 
-                + getBahanBody() + "\n Jumlah Tabung Gas: " + getJumlahTabungGas() + "\n Merk: " + getMerk();
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "            |");
+        System.out.println("| Warna               | " + getWarna() + "          |");
+        System.out.println("| Kapasitas Penumpang | " + getKapasitasPenumpang() + "                |");
+        System.out.println("| Bahan Body          | " + getBahanBody() + "      |");
+        System.out.println("| Jumlah Tabung Gas   | " + jumlahTabungGas + "              |");
+        System.out.println("| Merk                | " + merk + "           |");
+        System.out.println("| Posisi Ketinggian   | " + posisiKetinggian() + " meter    |");
+        System.out.println("+----------------------+--------------------+");
     }
 }

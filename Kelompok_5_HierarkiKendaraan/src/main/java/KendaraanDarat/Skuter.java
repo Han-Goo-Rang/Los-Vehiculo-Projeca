@@ -1,56 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package KendaraanDarat;
 
-/**
- *
- * @author noven
- */
-public class Skuter {
-    // Atribut
+public class Skuter extends KendaraanDarat {
     private String merekSkuter;
     private double asuransi;
 
-    // Konstruktor
-    public Skuter(String merekSkuter, double asuransi) {
+    public Skuter(String nama, String warna, String jenisKendaraan, String jenisPenggerak, String merekSkuter, double asuransi) {
+        super(nama, warna, jenisKendaraan, jenisPenggerak);
         this.merekSkuter = merekSkuter;
         this.asuransi = asuransi;
     }
 
-    // Getter dan Setter
-    public String getMerekSkuter() {
-        return merekSkuter;
-    }
-
-    public void setMerekSkuter(String merekSkuter) {
-        this.merekSkuter = merekSkuter;
-    }
-
-    public double getAsuransi() {
-        return asuransi;
-    }
-
-    public void setAsuransi(double asuransi) {
-        this.asuransi = asuransi;
-    }
-
-    // Method untuk menghitung jarak maksimal
-    public double jarakMaksimal() {
-        double rataRataKonsumsiBahanBakar = 40; // km per liter
-        double kapasitasTangki = 5; // liter
-        return rataRataKonsumsiBahanBakar * kapasitasTangki;
-    }
-
-    // Method untuk menyetir
-    public void menyetir() {
-        System.out.println("Skuter dengan merek " + merekSkuter + " sedang dikendarai.");
-    }
-
-    // Method untuk mengerem
-    public void mengerem() {
-        System.out.println("Skuter dengan merek " + merekSkuter + " sedang mengerem.");
+    @Override
+    public void tampilkanDetail() {
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Atribut             | Nilai              |");
+        System.out.println("+----------------------+--------------------+");
+        System.out.println("| Nama Kendaraan      | " + getNama() + "        |");
+        System.out.println("| Warna               | " + getWarna() + "        |");
+        System.out.println("| Jenis Kendaraan     | " + getJenisKendaraan() + " |");
+        System.out.println("| Jenis Penggerak     | " + getJenisPenggerak() + " |");
+        System.out.println("| Merek Skuter        | " + merekSkuter + "        |");
+        System.out.println("| Asuransi            | " + asuransi + "          |");
+        System.out.println("+----------------------+--------------------+");
     }
 }
-
