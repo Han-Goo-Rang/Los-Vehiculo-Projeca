@@ -25,6 +25,12 @@ public abstract class KendaraanDarat extends Kendaraan {
     public String getJenisPenggerak() {
         return jenisPenggerak;
     }
+    
+    @Override
+    public String toString() {
+        return super.toString() + ", Jenis Kendaraan: " + jenisKendaraan + ", Jenis Penggerak: " + jenisPenggerak;
+    }
   
+    @Override
     public abstract void tampilkanDetail();
 }

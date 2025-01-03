@@ -19,7 +19,7 @@ public abstract class KendaraanAir extends Kendaraan {
         this.tipePenggerak = tipePenggerak;
     }
 
-    // Getter
+    
     public String getBahanLambung() {
         return bahanLambung;
     }
@@ -28,13 +28,13 @@ public abstract class KendaraanAir extends Kendaraan {
         return tipePenggerak;
     }
 
-    // toString Method
+    
     @Override
     public String toString() {
         return super.toString() + ", Bahan Lambung: " + bahanLambung + ", Tipe Penggerak: " + tipePenggerak;
     }
 
-    // Metode abstrak untuk menampilkan deskripsi kendaraan
+    
     @Override
     public abstract void tampilkanDetail();
 }

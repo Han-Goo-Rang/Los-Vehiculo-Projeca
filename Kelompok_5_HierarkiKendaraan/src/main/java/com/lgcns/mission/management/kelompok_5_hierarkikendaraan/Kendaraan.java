@@ -17,7 +17,7 @@ public abstract class Kendaraan {
         this.warna = warna;
     }
 
-    // Getter
+    
     public String getNama() {
         return nama;
     }
@@ -28,7 +28,7 @@ public abstract class Kendaraan {
     
     public abstract void tampilkanDetail();
 
-    // toString Method
+    
     @Override
     public String toString() {
         return "Kendaraan [nama=" + nama + ", warna=" + warna + "]";

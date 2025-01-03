@@ -24,8 +24,7 @@ public abstract class KendaraanUdara extends Kendaraan {
     public String toString() {
         return super.toString() + ", Kapasitas Penumpang: " + kapasitasPenumpang + ", Bahan Body: " + bahanBody;
     }
-
-    // Abstract method to be implemented by subclasses
+    
     @Override
     public abstract void tampilkanDetail();
 }

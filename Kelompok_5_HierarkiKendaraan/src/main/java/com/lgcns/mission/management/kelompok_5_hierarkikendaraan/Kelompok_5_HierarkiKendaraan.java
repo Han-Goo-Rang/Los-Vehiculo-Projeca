@@ -63,6 +63,7 @@ public class Kelompok_5_HierarkiKendaraan {
         
         Kendaraan[] kendaraanAir = {
             new KapalFerry("Kapal Ferry", "Putih", "Baja", "Mesin Diesel", 500),
+            new KapalLayar("Kapal Ferry", "Putih", "Baja", "Mesin Diesel", 4),
             new Kayak("Kayak", "Hijau", "Fiber Glass", "Dayung", 4),
             new Rakit("Rakit", "Coklat", "Bambu", "Arus Air", 4),
             new Sampan("Sampan", "Putih", "Kayu", "Dayung/Mesin", 2),
